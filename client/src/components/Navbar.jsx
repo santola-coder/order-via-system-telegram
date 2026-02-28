@@ -20,7 +20,7 @@ const Navbar = () => {
       : "text-gray-600 hover:text-indigo-600 transition flex items-center gap-2";
 
   return (
-    <nav className="fixed w-full backdrop-blur-md  z-50 border border-gray-300">
+    <nav className="fixed w-full backdrop-blur-md  z-50 border border-indigo-400">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -31,7 +31,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex justify-center space-x-8 ">
           <NavLink to="/" className={navStyle}>
             <House size={18} />
             Home
@@ -46,21 +46,17 @@ const Navbar = () => {
             <CircleQuestionMark size={18} />
             About
           </NavLink>
-
-          
-
-          {/* Cart */}
-          <button className="relative bg-indigo-500 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition flex items-center gap-2">
-            <ShoppingCart size={20} />
-            <span>Cart</span>
-
-            {cartCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-xs px-2 py-1 rounded-full">
-                {cartCount}
-              </span>
-            )}
-          </button>
         </div>
+        <button className="relative bg-indigo-500 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition flex items-center gap-2">
+          <ShoppingCart size={20} />
+          <span>Cart</span>
+
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2  text-xs px-2 py-1 bg-red-300 backdrop-blur-md p-6 rounded-xl border border-white/20 text-red-500">
+              {cartCount}
+            </span>
+          )}
+        </button>
 
         {/* Mobile Toggle */}
         <button

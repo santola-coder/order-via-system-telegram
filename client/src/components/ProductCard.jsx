@@ -14,14 +14,14 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="relative bg-white rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden group cursor-pointer">
+    <div className="relative bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
       {/* Top Badge */}
-      <span className="absolute top-4 left-4 bg-indigo-100 text-indigo-500 text-xs px-3 py-1 rounded-full shadow">
+      <span className="absolute top-4 left-4 bg-indigo-500/20 text-indigo-500 text-xs px-3 py-1 rounded-full shadow">
         New
       </span>
 
       {/* Discount Badge */}
-      <span className="absolute top-4 right-4 bg-red-50 text-red-500 text-xs px-3 py-1 rounded-full shadow">
+      <span className="absolute top-4 right-4 bg-red-500/20 text-red-500 text-xs px-3 py-1 rounded-full shadow">
         -20%
       </span>
 
