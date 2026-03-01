@@ -14,18 +14,19 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="relative bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
+    <div className="relative bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer">
       {/* Top Badge */}
-      <span className="absolute top-4 left-4 bg-indigo-500/20 text-indigo-500 text-xs px-3 py-1 rounded-full shadow">
+
+      {/* <span className="absolute top-4 left-4 bg-indigo-500/20 text-indigo-500 text-xs px-3 py-1 rounded-full shadow">
         New
-      </span>
+      </span> */}
 
-      {/* Discount Badge */}
-      <span className="absolute top-4 right-4 bg-red-500/20 text-red-500 text-xs px-3 py-1 rounded-full shadow">
+      
+      {/* <span className="absolute top-4 right-4 bg-red-500/20 text-red-500 text-xs px-3 py-1 rounded-full shadow">
         -20%
-      </span>
+      </span>  */}
 
-      {/* Image */}
+      
       <div className="h-60 flex items-center justify-center bg-gray-100 p-6 rounded-xl">
         <img
           src={product.image}

@@ -60,10 +60,34 @@ const Footer = () => {
   ];
 
   const trustBadges = [
-    { Icon: Truck, label: "Free Shipping", sub: "Orders over $75" },
-    { Icon: RotateCcw, label: "Easy Returns", sub: "30-day policy" },
-    { Icon: ShieldCheck, label: "Secure Pay", sub: "256-bit SSL" },
-    { Icon: Headphones, label: "24/7 Support", sub: "Always here" },
+    {
+      Icon: Truck,
+      label: "Free Shipping",
+      sub: "Orders over $75",
+      bg: "bg-green-100",
+      text: "text-green-600",
+    },
+    {
+      Icon: RotateCcw,
+      label: "Easy Returns",
+      sub: "30-day policy",
+      bg: "bg-orange-100",
+      text: "text-orange-600",
+    },
+    {
+      Icon: ShieldCheck,
+      label: "Secure Pay",
+      sub: "256-bit SSL",
+      bg: "bg-blue-100",
+      text: "text-blue-600",
+    },
+    {
+      Icon: Headphones,
+      label: "24/7 Support",
+      sub: "Always here",
+      bg: "bg-purple-100",
+      text: "text-purple-600",
+    },
   ];
 
   const paymentIcons = ["VISA", "MC", "AMEX", "PAYPAL", "APPLE PAY", "GPay"];
@@ -90,12 +114,14 @@ const Footer = () => {
         .footer-link::after { content:''; position:absolute; bottom:-1px; left:0; width:0; height:1px; background:#6366f1; transition:width 0.3s ease; }
         .footer-link:hover::after { width:100%; }
         .social-btn { transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1); }
-        .social-btn:hover { transform: translateY(-4px) scale(1.1); color: #818cf8 !important; background: #2e2a5e !important; border-color: #6366f1 !important; }
+        .social-btn:hover { transform: translateY(-4px) scale(1.1); color: #818cf8 !important; background: #ffff !important; border-color: #6366f1 !important; }
         .trust-card { transition: all 0.2s ease; }
         // .trust-card:hover { background: #141414 !important; border-color: #6366f1 !important; }
         .trust-card:hover .trust-icon { color: #6366f1 !important; }
         .app-btn { transition: all 0.2s ease; }
         .sub-input:focus { border-color: #6366f1 !important; outline: none; }
+
+       
       `}</style>
 
       {/* Top Announcement Strip */}
@@ -120,24 +146,24 @@ const Footer = () => {
       </div>
 
       {/* Trust Badges */}
-      <div className="border-b">
+      <div className="border-b ">
         <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {trustBadges.map(({ Icon, label, sub }) => (
+          {trustBadges.map(({ Icon, label, sub, color, text }) => (
             <div
               key={label}
               className="trust-card flex items-center gap-4 px-5 py-4 rounded-lg cursor-default border-1 border-gray-300"
             >
-              <div
-                className="trust-icon p-2 rounded-md"
-                style={{ background: "#e0e7ff", color: "#6366f1" }}
-              >
-                <Icon size={18} strokeWidth={1.5} />
+              <div className="trust-icon p-3 rounded-xl border border-gray-300">
+              <div className="{`p-3 rounded-xl ${bg}`}">
+                   <Icon className={`${color} w-5 h-5 ${text}`} />
+              </div>
+             
               </div>
               <div>
-                <p className="text-sm font-medium" style={{ color: "#e8e8e0" }}>
+                <p className="text-sm font-medium mb-2 text-indigo-500">
                   {label}
                 </p>
-                <p className="text-xs" style={{ color: "#555" }}>
+                <p className="text-xs" style={{ color: "#292524" }}>
                   {sub}
                 </p>
               </div>
@@ -163,10 +189,7 @@ const Footer = () => {
                 FAKESTORE
               </span>
             </div>
-            <p
-              className="text-sm leading-relaxed mb-6"
-              style={{ color: "#555", fontWeight: 300 }}
-            >
+            <p className="text-lg leading-relaxed mb-6 text-black/70">
               Curated fashion for those who move through the world with
               intention. Every piece tells a story.
             </p>
@@ -176,7 +199,7 @@ const Footer = () => {
               {socialLinks.map(({ name, Icon }) => (
                 <button
                   key={name}
-                  className="social-btn p-2.5 rounded-lg border border-indigo-500"
+                  className="social-btn p-2.5 rounded-full border border-indigo-500 cursor-pointer"
                   style={{
                     color: "#6366f1",
                     background: "#e0e7ff",
@@ -193,14 +216,14 @@ const Footer = () => {
               {contactInfo.map(({ Icon, text }) => (
                 <div key={text} className="flex items-start gap-3">
                   <Icon
-                    size={13}
+                    size={20}
                     strokeWidth={1.5}
                     className="mt-0.5 shrink-0"
                     style={{ color: "#6366f1" }}
                   />
                   <span
-                    className="text-xs leading-relaxed"
-                    style={{ color: "#555" }}
+                    className="text-sm leading-relaxed"
+                    style={{ color: "#292524" }}
                   >
                     {text}
                   </span>
@@ -225,7 +248,7 @@ const Footer = () => {
                       href="#"
                       className="footer-link text-sm transition-colors duration-200"
                       style={{
-                        color: hoveredLink === link ? "#e8e8e0" : "#555",
+                        color: hoveredLink === link ? "#4f39f6" : "#555",
                         fontWeight: 300,
                       }}
                       onMouseEnter={() => setHoveredLink(link)}
