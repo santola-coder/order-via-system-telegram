@@ -20,13 +20,13 @@ const Navbar = () => {
       : "text-gray-600 hover:text-indigo-600 transition flex items-center gap-2";
 
   return (
-    <nav className="fixed w-full backdrop-blur-md  z-50 border border-indigo-400">
+    <nav className="fixed w-full backdrop-blur-xl  z-50 border border-gray-300">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <Store className="text-indigo-600" size={28} />
           <span className="text-2xl font-bold text-gray-800">
-            Fake<span className="text-indigo-600">Store</span>
+            Open<span className="text-indigo-600">Store</span>
           </span>
         </Link>
 

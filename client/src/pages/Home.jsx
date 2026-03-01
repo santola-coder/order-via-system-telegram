@@ -13,7 +13,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-white/90 min-h-screen">
       <Navbar />
       <Hero />
 

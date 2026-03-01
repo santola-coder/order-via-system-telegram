@@ -18,7 +18,7 @@ const Hero = () => {
         <div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-800 leading-tight">
             Elevate Your
-            <span className="bg-gradient-to-tl from-slate-100 via-violet-600 to-slate-100 bg-clip-text text-transparent 0 block">
+            <span className="bg-gradient-to-tl from-slate-300 via-violet-600 to-slate-100 bg-clip-text text-transparent 0 block">
               Shopping Experience
             </span>
           </h1>
@@ -29,12 +29,12 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 flex space-x-4">
-            <button className="flex items-center space-x-2 bg-indigo-600 text-white px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition">
+            <button className="flex items-center space-x-2 bg-indigo-600 text-white px-6 py-2 rounded-full shadow-lg hover:scale-105 transition cursor-pointer">
               <span>Shop Now</span>
               <ArrowRight size={18} />
             </button>
 
-            <button className="px-6 py-3 rounded-2xl border border-gray-300 hover:bg-gray-100 transition">
+            <button className="px-6 py-2 rounded-full border border-gray-300 hover:bg-gray-100 transition cursor-pointer">
               Learn More
             </button>
           </div>
@@ -42,17 +42,21 @@ const Hero = () => {
 
         {/* Right Image / Product Mockup */}
         <div className="relative">
-          <div className="bg-white rounded-3xl shadow-xl p-8 backdrop-blur-lg">
+          <div className=" p-6">
             <img
               src="https://imageio.forbes.com/specials-images/imageserve/68af4181b1628ca633ac8a03/0x0.jpg?format=jpg&height=600&width=1200&fit=bounds"
               alt="Product Preview"
-              className="w-full h-80 object-contain hover:scale-105 transition"
+              className="w-full h-90 object-cover transition rounded-2xl"
             />
           </div>
 
           {/* Floating Card */}
-          <div className="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-2xl px-6 py-4">
+          <div className="absolute -bottom-6 -left-6 bg-white/50 shadow-lg rounded-2xl px-8 py-6 border border-gray-300">
             <p className="text-sm text-gray-500">Best Seller</p>
+            <p className="font-semibold text-indigo-600">$40.5</p>
+          </div>
+          <div className="absolute -right-8 top-0 bg-white/50 shadow-lg rounded-2xl px-8 py-4 border border-gray-300">
+            <p className="text-sm text-black/50">Best Seller</p>
             <p className="font-semibold text-indigo-600">$199.99</p>
           </div>
         </div>
