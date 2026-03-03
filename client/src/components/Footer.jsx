@@ -52,33 +52,26 @@ const Footer = () => {
     ],
   };
 
-  const socialLinks = [
-    { name: "Instagram", Icon: Instagram },
-    { name: "Twitter", Icon: Twitter },
-    { name: "YouTube", Icon: Youtube },
-    { name: "Facebook", Icon: Facebook },
-  ];
-
   const trustBadges = [
     {
       Icon: Truck,
       label: "Free Shipping",
       sub: "Orders over $75",
-      bg: "bg-green-100",
-      text: "text-green-600",
+      bg: "bg-orange-50",
+      text: "text-orange-500",
     },
     {
       Icon: RotateCcw,
       label: "Easy Returns",
       sub: "30-day policy",
-      bg: "bg-orange-100",
-      text: "text-orange-600",
+      bg: "bg-green-50",
+      text: "text-green-600",
     },
     {
       Icon: ShieldCheck,
       label: "Secure Pay",
       sub: "256-bit SSL",
-      bg: "bg-blue-100",
+      bg: "bg-blue-50",
       text: "text-blue-600",
     },
     {
@@ -106,24 +99,6 @@ const Footer = () => {
         color: "#e8e8e0",
       }}
     >
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&display=swap');
-        @keyframes shimmer { 0%{background-position:0%} 100%{background-position:200%} }
-        @keyframes checkPop { 0%{transform:scale(0)} 60%{transform:scale(1.2)} 100%{transform:scale(1)} }
-        .footer-link { position:relative; display:inline-flex; align-items:center; gap:6px; }
-        .footer-link::after { content:''; position:absolute; bottom:-1px; left:0; width:0; height:1px; background:#6366f1; transition:width 0.3s ease; }
-        .footer-link:hover::after { width:100%; }
-        .social-btn { transition: all 0.25s cubic-bezier(0.34,1.56,0.64,1); }
-        .social-btn:hover { transform: translateY(-4px) scale(1.1); color: #818cf8 !important; background: #ffff !important; border-color: #6366f1 !important; }
-        .trust-card { transition: all 0.2s ease; }
-        // .trust-card:hover { background: #141414 !important; border-color: #6366f1 !important; }
-        .trust-card:hover .trust-icon { color: #6366f1 !important; }
-        .app-btn { transition: all 0.2s ease; }
-        .sub-input:focus { border-color: #6366f1 !important; outline: none; }
-
-       
-      `}</style>
-
       {/* Top Announcement Strip */}
       <div
         style={{
@@ -147,17 +122,16 @@ const Footer = () => {
 
       {/* Trust Badges */}
       <div className="border-b ">
-        <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {trustBadges.map(({ Icon, label, sub, color, text }) => (
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {trustBadges.map(({ Icon, label, sub, color, text, bg }) => (
             <div
               key={label}
-              className="trust-card flex items-center gap-4 px-5 py-4 rounded-lg cursor-default border-1 border-gray-300"
+              className="trust-card flex items-center gap-4 px-5 py-4 rounded-lg cursor-default border border-gray-300"
             >
-              <div className="trust-icon p-3 rounded-xl border border-gray-300">
-              <div className="{`p-3 rounded-xl ${bg}`}">
-                   <Icon className={`${color} w-5 h-5 ${text}`} />
-              </div>
-             
+              <div className="trust-icon p-3 rounded-xl  ">
+                <div className={`p-3 rounded-xl ${bg}`}>
+                  <Icon className={`${color} w-7 h-7 ${text}`} />
+                </div>
               </div>
               <div>
                 <p className="text-sm font-medium mb-2 text-indigo-500">
@@ -195,7 +169,7 @@ const Footer = () => {
             </p>
 
             {/* Socials */}
-            <div className="flex gap-3 mb-8">
+            {/* <div className="flex gap-3 mb-8">
               {socialLinks.map(({ name, Icon }) => (
                 <button
                   key={name}
@@ -209,7 +183,7 @@ const Footer = () => {
                   <Icon size={16} strokeWidth={1.5} />
                 </button>
               ))}
-            </div>
+            </div> */}
 
             {/* Contact */}
             <div className="flex flex-col gap-3 mb-8">
