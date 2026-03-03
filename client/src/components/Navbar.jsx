@@ -47,7 +47,7 @@ const Navbar = () => {
             About
           </NavLink>
         </div>
-        <button className="relative bg-indigo-500 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition flex items-center gap-2">
+        <button className="relative bg-indigo-500 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition flex items-center gap-2 cursor-pointer">
           <ShoppingCart size={20} />
           <span>Cart</span>
 

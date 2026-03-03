@@ -3,7 +3,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  
 }
 
 /*---------------- section trust ---------------------- */
@@ -19,4 +18,68 @@ body {
 }
 .trust-card:nth-child(4) {
   border-left: 6px solid #fdc700;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+@keyframes checkPop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*  footer style ------- */
+.footer-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #6366f1;
+  transition: width 0.3s ease;
+}
+.footer-link:hover::after {
+  width: 100%;
+}
+.social-btn {
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.social-btn:hover {
+  transform: translateY(-4px) scale(1.1);
+  color: #818cf8 !important;
+  background: #ffff !important;
+  border-color: #6366f1 !important;
+}
+.trust-card {
+  transition: all 0.2s ease;
+}
+
+.trust-card:hover .trust-icon {
+  color: #6366f1 !important;
+}
+.app-btn {
+  transition: all 0.2s ease;
+}
+.sub-input:focus {
+  border-color: #6366f1 !important;
+  outline: none;
 }
