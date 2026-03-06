@@ -195,9 +195,14 @@ Example request:
 
 ## 👨‍💻 Author
 
-**Your Name**
-🎓 Computer Science Student
-💻 Interests: Backend Development, System Design, APIs
+**Tola San**
+🎓 A Computer Science Student
+💻 Interests: 🚀 Passionate about learning, building, and exploring modern technology 
+
+### 🌐 Learning & Community
+
+- 🧠 Reddit – https://reddit.com  
+- ✍️ Medium – https://medium.com
 
 ---
 
