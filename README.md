@@ -3,7 +3,7 @@
 ### 📩 Checkout Notification via Telegram Bot
 
 A modern **full-stack web application** that allows users to browse products, add them to a cart, and checkout.
-When an order is placed, the system automatically sends a **Telegram notification to the admin**.
+When an order is placed, the system automatically sends a to notify to Telegram**Telegram notification to the admin**.
 
 ---
 
