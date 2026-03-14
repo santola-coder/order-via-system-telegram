@@ -3,7 +3,7 @@
 ### 📩 Checkout Notification via Telegram Bot
 
 A modern **full-stack web application** that allows users to browse products, add them to a cart, and checkout.
-When an order is placed, the system automatically sends a **Telegram notification to the admin**.
+When an order is placed, the system automatically sends a  Notify to Users In Telegram **Telegram notification to the admin**.
 
 ---
 
@@ -96,8 +96,8 @@ order-product-system
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/order-product-system.git
-cd order-product-system
+https://github.com/santola-coder/order-via-system-telegram.git
+cd order-via-system-telegram
 ```
 
 ---
@@ -128,7 +128,7 @@ Create `.env` inside the **backend folder**
 
 ```
 PORT=3000
-TELEGRAM_BOT_TOKEN=your_token
+TELEGRAM_BOT_TOKEN=your_token  
 TELEGRAM_CHAT_ID=your_chat_id
 ```
 
@@ -203,6 +203,7 @@ Example request:
 
 - 🧠 Reddit – https://reddit.com  
 - ✍️ Medium – https://medium.com
+- Ai Resoures to fester learning as like CHATGPT, CLAUSES GEMINI .... 
 
 ---
 
