@@ -96,8 +96,8 @@ order-product-system
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/order-product-system.git
-cd order-product-system
+git clone https://github.com/order-via-system-telegram.git
+cd order-via-system-telegram 
 ```
 
 ---
